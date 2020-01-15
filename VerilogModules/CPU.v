@@ -9,6 +9,7 @@
 `include "RAM.v"
 `include "bcd2disp.v"
 
+
 module CPU(input clkin, output [7:0] OutPut, output [6:0] LED1, output [6:0] LED2);
 wire [7:0] bus;
 wire [3:0] MemAddr;
@@ -43,15 +44,17 @@ PC pc(.clk(clk), .rst(1'b0), .enable(CE), .jmp(J), .jmploc(bus[3:0]), .count(Pco
 triBuff4 tripc(.data(Pcount), .dataOut(bus[3:0]), .enable(CO));
 
 
-
 register4 MemAdd(.clk(clk), .D(bus[3:0]), .Q(Addr_in), .EI(MI));
 
 RAM ram(.clk(~clk), .address(Addr_in), .data_in(bus), .write_enable(RI), .reset(1'b0), .data_out(ramOut));
 tristateBuff triRam(.data(ramOut), .enable(RO), .dataOut(bus));
 
+
 IC ic(.clk(clk), .enable(1'b1), .Instruction(bus[7:4]), .ctrl_wrd({HLT, MI, RI, RO, IO, II, AI, AO, SO, SU, BI, OI, CE, CO, J}));
 
+
 register8 O(.clk(clk), .D(bus), .Q(OutPut), .EI(OI));
+
 
 bcd2sevenseg seg0(.bcd(OutPut[3:0]), .seg(LED1));
 bcd2sevenseg seg1(.bcd(OutPut[7:4]), .seg(LED2));
