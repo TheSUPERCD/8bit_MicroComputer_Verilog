@@ -7,6 +7,7 @@
 
 # IMPORTANT : 
   In order to use the assembler, please use below mentioned syntax :
+  
   python assembler.py <input_filename_with_extension>
   And press Enter.
   Now just copy the contents of the newly generated binary.txt file and use it to replace the similar looking block in RAM.v file.
