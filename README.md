@@ -1,7 +1,4 @@
 # 8bit_MicroComputer_Verilog
-This project was inspired by the efforts of Ben Eater to build an 8 bit computer on a breadboard. Even though this one was not built on a breadboard, it has the functionalities of his computer and modelled using Verilog HDL. This was developed for the Mini Project in Digital Systems course in my 3rd semester at IIT Palakkad.
-
-
   The VerilogModules folder contains all the Verilog source codes to simulate the 8-bit computer and also the testbench file.
   The modules required for the computer are defined separately and then combined and interfaced in a common module named CPU.v .
   It also contains a testbench file named CPU_tb.v which is used to simulate the behaviour of the computer.
@@ -30,3 +27,4 @@ This project was inspired by the efforts of Ben Eater to build an 8 bit computer
 
 
 # THANK YOU !!!
+  This project was inspired by the efforts of Ben Eater to build an 8 bit computer on a breadboard. Even though this one was not built on a breadboard, it has the functionalities of his computer and modelled using Verilog HDL. This was developed for the Mini Project in Digital Systems course in my 3rd semester at IIT Palakkad.
