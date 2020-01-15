@@ -7,7 +7,7 @@
 
 # IMPORTANT : 
   In order to use the assembler, please use below mentioned syntax :
-    python assembler.py <input_filename_with_extension>
+      python assembler.py <input_filename_with_extension>
   And press Enter.
   Now just copy the contents of the newly generated binary.txt file and use it to replace the similar looking block in RAM.v file.
   Now you can synthesize the CPU_tb.v file and see the output.
@@ -15,10 +15,11 @@
 
 # System Requirements :
   Make sure you have Python3 installed in your system.
+  Make sure you have iverilog (abbreviation of Icarus Verilog) or Vivado synthesizer/simulator.
 
 
 # Recommended :
-  Install iverilog (an open source verilog code synthesizer) and type in the set of below mentioned commands in your Command Prompt or Terminal window.
+  Install iverilog (an open source verilog code synthesizer) from here <https://bleyer.org/icarus/> and type in the set of below mentioned commands in your Command Prompt or Terminal window.
   iverilog CPU_tb.v
   vvp a.out
   gtkwave dump.vcd
