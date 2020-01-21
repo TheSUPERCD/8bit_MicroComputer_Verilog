@@ -4,14 +4,14 @@ reg [7:0] Memory[15:0];
 integer i;
 
 initial begin
-    Memory[0] = 8'b0001_1001;
-    Memory[1] = 8'b0010_1010;
-    Memory[2] = 8'b0100_0111;
-    Memory[3] = 8'b0011_1011;
-    Memory[4] = 8'b0010_1100;
+    Memory[0] = 8'b0001_1010;
+    Memory[1] = 8'b0010_1011;
+    Memory[2] = 8'b0100_0110;
+    Memory[3] = 8'b0011_1100;
+    Memory[4] = 8'b0010_1101;
     Memory[5] = 8'b1110_0000;
-    Memory[6] = 8'b0001_1101;
-    Memory[7] = 8'b0010_1110;
+    Memory[6] = 8'b0001_1110;
+    Memory[7] = 8'b0010_1111;
     Memory[8] = 8'b1110_0000;
     Memory[9] = 8'b1111_0000;
     Memory[10] = 8'b0000_0011;
