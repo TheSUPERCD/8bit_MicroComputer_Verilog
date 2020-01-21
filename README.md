@@ -18,7 +18,7 @@
     Now the RAM.v module in the VerilogModules folder will be updated with the new set of instructions.
     No need to copy paste anything into the RAM module.
 
-    <b>THIS METHOD IS RECOMMENDED.</b>
+    THIS METHOD IS RECOMMENDED.
 
 
   # Method 2 :
