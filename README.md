@@ -5,6 +5,8 @@
 
   The parent folder contains the Assembly language compiler in the form of a python script as well as a DemoProgram.asm file which is essentially a 16 byte executable assembly code. The compiler accepts the compilable text file as an argument in the compilation line and writes the binary sequence in a file named binary.txt .
 
+  And the outputFiles folder contains the output obbatined from the testing of the modules. 
+
 # IMPORTANT : 
   In order to use the assembler, please use below mentioned syntax :
   # Method 1 :
