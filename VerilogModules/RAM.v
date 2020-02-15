@@ -35,6 +35,6 @@ begin
     end
 end
 
-assign data = (read_enable & ~write_enable) ? buffer : 8'bz;
+assign data = (read_enable & ~write_enable) ? buffer : 8'bzzzzzzzz;
 
 endmodule
