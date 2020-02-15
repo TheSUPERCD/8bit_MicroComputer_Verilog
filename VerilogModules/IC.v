@@ -1,14 +1,14 @@
 `timescale 1ns/1ps
 module IC(input clk, input enable, input [3:0] Instruction, output reg [14:0] ctrl_wrd);
 wire CLK;
-reg [3:0] instr;
+//reg [3:0] Instruction;
 assign CLK = (~clk & enable);
 reg [2:0] Inst_count;
 reg reset_in;
 
 initial begin
     Inst_count <= 3'b111;
-    reset_in <= 0;
+    reset_in <= 1'b0;
 end
 always @ (posedge CLK)
     begin
@@ -18,7 +18,7 @@ always @ (posedge CLK)
             3'b000: ctrl_wrd = 15'b010000000000010;
             3'b001: ctrl_wrd = 15'b000101000000100;
             3'b010: begin
-                    case(instr)
+                    case(Instruction)
                     4'b0001: ctrl_wrd = 15'b010010000000000; // LDA
                     4'b0010: ctrl_wrd = 15'b010010000000000; //ADD
                     4'b0011: ctrl_wrd = 15'b010010000000000;  //SUBT
@@ -29,7 +29,7 @@ always @ (posedge CLK)
                     endcase 
                     end      
             3'b011: begin
-                    case(instr)
+                    case(Instruction)
                     4'b0001: ctrl_wrd = 15'b000100100000000; // LDA
                     4'b0010: ctrl_wrd = 15'b000100000010000; //ADD
                     4'b0011: ctrl_wrd = 15'b000100000010000; //SUBT
@@ -40,7 +40,7 @@ always @ (posedge CLK)
                     endcase             
                     end
             3'b100: begin
-                    case(instr)
+                    case(Instruction)
                     4'b0001: ctrl_wrd = 15'b000000000000000; // LDA done
                     4'b0010: ctrl_wrd = 15'b000000101000000; //ADD
                     4'b0011: ctrl_wrd = 15'b000000101100000; //SUBT
@@ -55,13 +55,5 @@ always @ (posedge CLK)
         endcase                          
     end
 
-
-    always @(Instruction)
-    begin
-        if(Instruction != 4'b0000)
-        begin
-            instr <= Instruction;
-        end
-    end
 
 endmodule
