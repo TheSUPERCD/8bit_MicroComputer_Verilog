@@ -1,11 +1,12 @@
 # 8bit_MicroComputer_Verilog
+  This computer is based on the Von Neumann architechture (Same memory shared between program and data).
   The VerilogModules folder contains all the Verilog source codes to simulate the 8-bit computer and also the testbench file.
   The modules required for the computer are defined separately and then combined and interfaced in a common module named CPU.v .
   It also contains a testbench file named CPU_tb.v which is used to simulate the behaviour of the computer.
 
   The parent folder contains the Assembly language compiler in the form of a python script as well as a DemoProgram.asm file which is essentially a 16 byte executable assembly code. The compiler accepts the compilable text file as an argument in the compilation line and writes the binary sequence in a file named binary.txt .
 
-  And the outputFiles folder contains the output obbatined from the testing of the modules. 
+  And the outputFiles folder contains the output obtained from the testing of the modules. 
 
 # IMPORTANT : 
   In order to use the assembler, please use below mentioned syntax :
