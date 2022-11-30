@@ -25,19 +25,16 @@ end
 
 always @(posedge clk)
 begin
-    if(!reset)
+    if(write_enable & ~read_enable)
     begin
-        if(write_enable & ~read_enable)
-        begin
-            Memory[address] <= data;
-        end
-        else
-        begin
-            buffer <= Memory[address];
-        end
+        Memory[address] <= data;
+    end
+    else
+    begin
+        buffer <= Memory[address];
     end
 end
 
-assign data = (read_enable & ~write_enable) ? buffer : 8'bz
+assign data = (read_enable & ~write_enable) ? buffer : 8'bzzzzzzzz;
 
 endmodule

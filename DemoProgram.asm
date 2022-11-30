@@ -1,16 +1,16 @@
-LDA 10
-ADD 11
-JMP 6
-SUBT 12
-ADD 13
-OUT
-LDA 14
-ADD 15
-OUT
-HLT
-3
-2
-1
-5
-10
-11
+LDA 10      // Load into register A, the value stored in memory location 10     [Memory address 0 (Zero-indexed)]
+ADD 11      // Add into A, the value stored in memory location 11               [Memory address 1 (Zero-indexed)]
+JMP 5       // Jump to the instruction at memory location 5                     [Memory address 2 (Zero-indexed)]
+SUBT 12     // Subtract from A, the value stored in memory location 12          [Memory address 3 (Zero-indexed)]
+ADD 13      // Add into A, the value stored in memory location 13               [Memory address 4 (Zero-indexed)]
+OUT         // Output the value in A                                            [Memory address 5 (Zero-indexed)]
+LDA 14      // Load into register A, the value stored in memory location 14     [Memory address 6 (Zero-indexed)]
+ADD 15      // Add into A, the value stored in memory location 15               [Memory address 7 (Zero-indexed)]
+OUT         // Output the value in A                                            [Memory address 8 (Zero-indexed)]
+HLT         // Halt the program, stop all operations                            [Memory address 9 (Zero-indexed)]
+3           //                                                                  [Memory address 10 (Zero-indexed)]
+2           //                                                                  [Memory address 11 (Zero-indexed)]
+1           //                                                                  [Memory address 12 (Zero-indexed)]
+5           //                                                                  [Memory address 13 (Zero-indexed)]
+10          //                                                                  [Memory address 14 (Zero-indexed)]
+11          //                                                                  [Memory address 15 (Zero-indexed)]

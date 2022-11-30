@@ -6,7 +6,7 @@ reg [7:0] buffer;
 initial begin
     Memory[0] <= 8'b0001_1010;
     Memory[1] <= 8'b0010_1011;
-    Memory[2] <= 8'b0100_0110;
+    Memory[2] <= 8'b0100_0101;
     Memory[3] <= 8'b0011_1100;
     Memory[4] <= 8'b0010_1101;
     Memory[5] <= 8'b1110_0000;
